@@ -4,6 +4,10 @@
     --color-border: #e1e1e1;
     --color-primary: #2B8492;
     --font-main: 'Barlow', sans-serif;
+    --top: 30%;
+    --left-0: 45%;
+    --left-1:65%;
+    --display: block;
   }
   
   * {
@@ -165,4 +169,39 @@ img {
   size: 5px;
   color: #555;
   opacity: 0.9;
+}
+
+.modal{
+  position: absolute;
+  top: var(--top);
+  left: var(--left-0);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  color: whitesmoke;
+  border: 1px solid black;
+  display: var(--display);
+}
+
+.modal-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-bottom: 10px;
+}
+
+.close{
+  position: absolute;
+  top: var(--top);
+  left: var(--left-1);
+  font-size: 30px;
+  padding: 0px 5px;
+  background: #1f1f1f;
+  border-radius: 50%;
+  color: whitesmoke;
+  z-index: 10;
+}
+
+.modal-body p, li{
+  padding-bottom: 10px;
 }

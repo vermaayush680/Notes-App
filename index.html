@@ -1,45 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/notes.png">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <title>Minimalistic Notes App</title>
 </head>
+
 <body>
-    <div class="container active">
-  <header id="outside_header">
-    <button id="add" title="Add new note">
-      <img src="./add.png" width="20em" alt="">
-    </button>
-    <h3>Notes</h3>
-    <div class="buttons">
-      <button id="removenote" title="Delete note">
-        <img src="./delete.png" width="20em" alt="">
+  <div class="container active">
+    <header>
+      <button id="add" title="Add new note">
+        <img src="./assets/images/add.png" width="20em" alt="">
       </button>
-      <button id="save" title="Save note">
-        <img src="./save.png" width="20em" alt="">
-      </button>
-    </div>
-  </header>
-  <aside>
-    <span id="toggle">
-      <img class="left" src="./left.png" width="20em" alt="">
-      <img class="right" src="./right.png" width="25em" alt="">
-    </span>
-    <div class="search-box">
-      <!-- <img src="./search.png" width="20em" alt="">
+      <h3>Minimalistic Notes App</h3>
+      <div class="buttons">
+        <button id="removenote" title="Delete note">
+          <img src="./assets/images/delete.png" width="20em" alt="">
+        </button>
+        <button id="save" title="Save note">
+          <img src="./assets/images/save.png" width="20em" alt="">
+        </button>
+      </div>
+    </header>
+    <aside>
+      <span id="toggle">
+        <img class="left" src="./assets/images/left.png" width="20em" alt="">
+        <img class="right" src="./assets/images/right.png" width="25em" alt="">
+      </span>
+      <div class="search-box">
+        <button type="button" class="close">&times;</button>
+        <div class="modal" id="overlay">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Keyboard Shortcuts</h4>
+              </div>
+              <div class="modal-body">
+                <p>You can use the following shortcuts:</p>
+                <ol>
+                  <li>To save a note: <b>CTRL + S</b></li>
+                  <li>To delete a note: <b>DELETE</b></li>
+                  <li>To create a new note: <b>CTRL + ENTER</b></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <img src="./assets/images/search.png" width="20em" alt="">
       <input type="text" id="search" placeholder="Search"> -->
-    </div>
-    <ul id="notelist">
- 
-    </ul>
-  </aside>
-  <main>
-    <textarea name="noteinput" id="noteinput" cols="50" rows="50" placeholder="Create new note"></textarea>
-  </main>
-</div>
-<script src="script.js"></script>
+      </div>
+      <ul id="notelist">
+
+      </ul>
+    </aside>
+    <main>
+      <textarea name="noteinput" id="noteinput" cols="50" rows="50" placeholder="Create new note"></textarea>
+    </main>
+  </div>
+  <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

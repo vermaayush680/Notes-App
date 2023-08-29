@@ -10,6 +10,17 @@ let showSidebar = true;
 
 window.addEventListener('DOMContentLoaded', event => {
 
+  setTimeout(()=>{
+    overlay.style.display = "none"
+    close.style.display = "none"
+  }, 5000);
+
+  let close = document.getElementsByClassName('close')[0];
+  close.onclick = () =>  {
+    overlay.style.display = "none"
+    close.style.display = "none"
+  };
+
   for (const data of notes) {
     let li = document.createElement('li');
     li.className = `note-${data.id}`;
@@ -87,13 +98,7 @@ window.addEventListener('DOMContentLoaded', event => {
     }
   }
 
-  add.onclick = () => addNote();
-
-  save.onclick = event => saveNote();
-
-  removenote.onclick = event => removeNote();
-
-  notelist.onclick = event => {
+  const noteListFn = (event) => {
     if (event.target.tagName === 'LI') {
       let selectedList = document.getElementsByClassName('selected');
       for (const selectedElem of selectedList) {
@@ -110,8 +115,7 @@ window.addEventListener('DOMContentLoaded', event => {
       focus();
     }
   }
-
-  toggle.onclick = event => {
+  const toggleFn = () => {
     let container = document.getElementsByClassName('container')[0];
     showSidebar = !showSidebar;
     showSidebar ? container.classList.add('active') : container.classList.remove('active');
@@ -124,6 +128,16 @@ window.addEventListener('DOMContentLoaded', event => {
     }
   };
 
+  add.onclick = () => addNote();
+
+  save.onclick = event => saveNote();
+
+  removenote.onclick = event => removeNote();
+
+  notelist.onclick = event => noteListFn(event);
+
+  toggle.onclick = event => toggleFn();
+
   document.addEventListener("keydown", function (event) {
     if (event.key === 's' && (event.ctrlKey || event.metaKey)) {
       event.preventDefault();
@@ -133,9 +147,9 @@ window.addEventListener('DOMContentLoaded', event => {
       event.preventDefault();
       removeNote();
     }
-    // if (event.key === 'n' && (event.ctrlKey || event.metaKey)) {
-    //   event.preventDefault();
-    //   addNote();
-    // }
+    if (event.key == 'Enter' && (event.ctrlKey || event.metaKey)) {
+      event.preventDefault();
+      addNote();
+    }
   });
 });
