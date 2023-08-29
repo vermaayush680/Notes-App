@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container active">
+  <header id="outside_header">
+    <button id="add" title="Add new note">
+      <img src="./add.png" width="20em" alt="">
+    </button>
+    <h3>Notes</h3>
+    <div class="buttons">
+      <button id="removenote" title="Delete note">
+        <img src="./delete.png" width="20em" alt="">
+      </button>
+      <button id="save" title="Save note">
+        <img src="./save.png" width="20em" alt="">
+      </button>
+    </div>
+  </header>
+  <aside>
+    <span id="toggle">
+      <img class="left" src="./left.png" width="20em" alt="">
+      <img class="right" src="./right.png" width="25em" alt="">
+    </span>
+    <div class="search-box">
+      <!-- <img src="./search.png" width="20em" alt="">
+      <input type="text" id="search" placeholder="Search"> -->
+    </div>
+    <ul id="notelist">
+ 
+    </ul>
+  </aside>
+  <main>
+    <textarea name="noteinput" id="noteinput" cols="50" rows="50" placeholder="Create new note"></textarea>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
