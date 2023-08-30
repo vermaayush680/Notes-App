@@ -1,0 +1,14 @@
+{
+  "name": "Minimalistic Notes App",
+  "version": "1.0.0",
+  "description": "A minimalistic notes app using ElectronJS",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Ayush Verma",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^26.1.0"
+  }
+}
